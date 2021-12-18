@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>AIR POLLUTION</title>
+    <style>
+        body { 
+            background: url("images/bghd.jpg"); 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            /* background-size: 100% 100%; */
+        }
+
+        .text-center{
+            margin-left: auto;
+            margin-right: auto;
+            white-space: nowrap;
+            width: fit-content;
+        }
+
+        .my-box{
+            margin-left: auto;
+            margin-right: auto;
+            height: fit-content;
+            width: 70%;
+
+            
+            background: #ffffff60;
+            backdrop-filter: blur(6px);
+            margin-top: 5.0rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+
+            border-radius: 0.5rem;
+            box-shadow: 10px 10px 20px #0000008e;
+            /* display: flex; */
+            
+            animation-name: stretch;
+            animation-duration: 1.5s; 
+            animation-timing-function: ease-out; 
+            animation-delay: 0;
+            animation-direction: alternate;
+            animation-iteration-count:calc(10);
+            animation-fill-mode: none;
+            animation-play-state: running;
+        }
+
+        @keyframes stretch {
+            0% {
+                background: #ffffff1c;
+                box-shadow: 10px 10px 20px #00000013;
+                color: #0000002a;
+            }
+            50% {
+                background: #ffffff34;
+                box-shadow: 10px 10px 20px #0000003d;
+                color: #000000a8;
+            }
+            100% {
+                background: #ffffff60;
+                box-shadow: 10px 10px 20px #0000008e;
+                color: #000000;
+            }
+        }
+
+        .my-box h1{
+            font-size: 35px;
+            font-family: "Impact";
+            letter-spacing: 6px;
+            word-spacing: 12px;
+        }
+
+        .my-box p {
+            font-size: 22px;
+            font-family: "Courier";
+            font-weight: bold;
+        }
+
+        .my-box hr{
+            /* background:#000000; */
+            
+            border: 1px solid #0c0c0ccc;
+        }
+    </style>
+</head>
+
+<body >
+  
+    <div class="my-box">
+        <h1 class="text-center"> AIR POLLUTION </h1>
+        <hr>
+        <p id="demo"></p>
+    </div>
+
+    <script>
+        var i = 0;
+        var txt = "Air pollution is a mixture of solid particles and gases in the air. Car emissions, chemicals from factories, dust, pollen and mold spores may be suspended as particles. Ozone, a gas, is a major part of air pollution in cities. When ozone forms air pollution, it's also called smog. Some air pollutants are poisonous."
+        var speed = 100;
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("demo").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        function fun(e) {
+            setTimeout(typeWriter, 2000)
+        }
+
+        document.addEventListener("DOMContentLoaded", fun(event));
+
+    </script>
+</body>
+
+</html>
