@@ -1,0 +1,135 @@
+<html>
+<title> POLLUTION </title>
+
+<style>
+      body { 
+          background: url("images/1591915.jpg"); 
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+          background-position: center;
+          /* background-size: 100% 100%; */
+      }
+
+      .text-center{
+          margin-left: auto;
+          margin-right: auto;
+          white-space: nowrap;
+          width: fit-content;
+      }
+
+      .my-box{
+          margin-left: auto;
+          margin-right: auto;
+          height: fit-content;
+          width: 70%;
+
+          
+          background: #ffffff60;
+          backdrop-filter: blur(6px);
+          margin-top: 5.0rem;
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
+          padding-left: 2rem;
+          padding-right: 2rem;
+
+          border-radius: 0.5rem;
+          box-shadow: 10px 10px 20px #0000008e;
+          /* display: flex; */
+          
+          animation-name: stretch;
+          animation-duration: 1.5s; 
+          animation-timing-function: ease-out; 
+          animation-delay: 0;
+          animation-direction: alternate;
+          animation-iteration-count:calc(10);
+          animation-fill-mode: none;
+          animation-play-state: running;
+      }
+
+      @keyframes stretch {
+          0% {
+              background: #ffffff1c;
+              box-shadow: 10px 10px 20px #00000013;
+              color: #0000002a;
+          }
+          50% {
+              background: #ffffff34;
+              box-shadow: 10px 10px 20px #0000003d;
+              color: #000000a8;
+          }
+          100% {
+              background: #ffffff60;
+              box-shadow: 10px 10px 20px #0000008e;
+              color: #000000;
+          }
+      }
+
+      .my-box h1{
+          font-size: 35px;
+          font-family: "Impact";
+          letter-spacing: 6px;
+          word-spacing: 12px;
+      }
+
+      .my-box p {
+          font-size: 22px;
+          font-family: "Courier";
+          font-weight: bold;
+      }
+
+      .my-box hr{
+          /* background:#000000; */
+          
+          border: 1px solid #0c0c0ccc;
+      }
+  </style>
+
+<body >
+  
+      <div class="my-box">
+          <h1 class="text-center">POLLUTION </h1>
+          <hr>
+          <p id="demo"></p>
+      </div>
+  
+      <script>
+          var i = 0;
+          var txt = "Pollution is the introduction of harmful materials into the environment. These harmful materials are called pollutants. Pollutants can be natural, such as volcanic ash. They can also be created by human activity, such as trash or runoff produced by factories. Pollutants damage the quality of air, water, and land."
+          var speed = 100;
+  
+          function typeWriter() {
+              if (i < txt.length) {
+                  document.getElementById("demo").innerHTML += txt.charAt(i);
+                  i++;
+                  setTimeout(typeWriter, speed);
+              }
+          }
+  
+          function fun(e) {
+              setTimeout(typeWriter, 2000)
+          }
+  
+          document.addEventListener("DOMContentLoaded", fun(event));
+  
+      </script>
+  </body>
+
+<FONT FACE ="Bookman Old Style" align="left" COLOR = "black"  SIZE = 5>
+
+</FONT>
+
+<FONT FACE ="Bookman Old Style" align="left" COLOR = "green"  SIZE = 5>
+<h2 align="center"><b>Types of Pollution</h2></font>
+
+<FONT FACE ="Bookman Old Style" align="center" COLOR = "black"  SIZE = 5>
+<ul style="list-style-type:square" color="black">
+         <li> <a href="Air_Pollution.html"> Air Pollution </a> </li>
+         <li> <a href="Water_Pollution.html">Water Pollution </a> </li>
+         <li> <a href="Soil_Pollution.html">Soil Pollution </a> </li>
+         <li> <a href="Noise_Pollution.html">Noise Pollution </a> </li>
+         <li> <a href="Radioactive_Pollution.html">Radioactive Pollution </a> </li>
+      </ul>
+
+</font>
+<html>
