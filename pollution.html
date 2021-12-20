@@ -1,12 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Pollution</title>
+
+      <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
-      
+
+      <div class="my-box">
+            <h1 class="text-center">POLLUTION </h1>
+            <hr>
+            <p id="demo"></p>
+      </div>
+
+      <br><br><br>
+      <div class="custom-container new-box">
+            <div class="row">
+                  <div class="col-6">
+                        <a href="Air_Pollution.html"> Air Pollution </a>
+                  </div>
+                  <div class="col-6">
+                        <a href="Water_Pollution.html"> Water Pollution </a>
+                  </div>
+                  <div class="col-6">
+                        <a href="Soil_Pollution.html"> Soil Pollution </a>
+                  </div>
+                  <div class="col-6">
+                        <a href="Noise_Pollution.html"> Noise Pollution </a>
+                  </div>
+                  <div class="col-6">
+                        <a href="Radioactive_Pollution.html"> Radioactive Pollution </a>
+                  </div>
+            </div>
+      </div>
+
+      <script>
+            var i = 0;
+            var txt = "Pollution is the introduction of harmful materials into the environment. These harmful materials are called pollutants. Pollutants can be natural, such as volcanic ash. They can also be created by human activity, such as trash or runoff produced by factories. Pollutants damage the quality of air, water, and land."
+            var speed = 100;
+
+            function typeWriter() {
+                  if (i < txt.length) {
+                        document.getElementById("demo").innerHTML += txt.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, speed);
+                  }
+            }
+
+            function fun(e) {
+                  setTimeout(typeWriter, 2000)
+            }
+
+            document.addEventListener("DOMContentLoaded", fun(event));
+
+      </script>
 </body>
+
 </html>
